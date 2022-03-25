@@ -5,7 +5,7 @@
 	<key>bundleid</key>
 	<string>com.huzuzhi.port</string>
 	<key>category</key>
-	<string>Tools</string>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>ECB0F862-A099-46CC-B3EB-2CAC540F3D45</key>
@@ -43,9 +43,9 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>huzuzhi</string>
+	<string>zuzhi</string>
 	<key>description</key>
-	<string>Quickly goto localhost by `Port`</string>
+	<string>Goto localhost:`port`</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -81,7 +81,7 @@
 				<string></string>
 				<key>script</key>
 				<string>port=$@
-python main.py $port</string>
+/usr/bin/python3 main.py $port</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -129,7 +129,7 @@ python main.py $port</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python add.py $@</string>
+				<string>/usr/bin/python3 add.py $@</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -152,7 +152,7 @@ python main.py $port</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python remove.py $@</string>
+				<string>/usr/bin/python3 remove.py $@</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -169,7 +169,7 @@ python main.py $port</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Quickly goto localhost by `Port`</string>
+	<string>Goto localhost:port</string>
 	<key>uidata</key>
 	<dict>
 		<key>1CCD44A9-DD8E-48A4-916B-91BFC0E48CAB</key>
@@ -202,9 +202,9 @@ python main.py $port</string>
 			<key>note</key>
 			<string>Load URLs</string>
 			<key>xpos</key>
-			<integer>230</integer>
+			<integer>135</integer>
 			<key>ypos</key>
-			<integer>100</integer>
+			<integer>95</integer>
 		</dict>
 	</dict>
 	<key>variablesdontexport</key>
@@ -212,6 +212,6 @@ python main.py $port</string>
 	<key>version</key>
 	<string>1.0.0</string>
 	<key>webaddress</key>
-	<string>huzuzhi.com/tools/port</string>
+	<string>https://github.com/zuzhi/port</string>
 </dict>
 </plist>

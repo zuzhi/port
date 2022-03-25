@@ -2,50 +2,49 @@
 # encoding: utf-8
 
 import sys
-from workflow import Workflow
+import json
 
+query = sys.argv[1:]
+items = []
 
-def main(wf):
-    # Get args from Workflow, already in normalized Unicode.
-    # This is also necessary for "magic" arguments to work.
-    args = wf.args
-
-    # Add an item to Alfred feedback
-    if len(args):
-        port = args[0]
-        wf.add_item(title='http://localhost:%s' % port, arg='http://localhost:%s' % port, valid=True)
-
-        # Search for port
-        results = search(port)
-        [wf.add_item(title=line, arg=line, valid=True) for line in results]
-    else:
-        # Load urls from `url_db.txt`
-        load_file(wf)
-
-    # Send output to Alfred. You can only call this once.
-    # Well, you *can* call it multiple times, but subsequent calls
-    # are ignored (otherwise the JSON sent to Alfred would be invalid).
-    wf.send_feedback()
-
-def load_file(wf):
+def load_db():
     with open('url_db.txt') as reader:
-        lines = reader.read().splitlines()
-        for line in reversed(lines):
-            wf.add_item(title=line, arg=line, valid=True)
+        urls = reader.read().splitlines()
+        return reversed(urls)
 
 def search(port):
-    results = []
+    items = []
     with open('url_db.txt') as reader:
-        lines = reader.read().splitlines()
-        for line in lines:
-            if 'http://localhost:%s' % port in line:
-                results.append(line)
-    return results
+        urls = reader.read().splitlines()
+        for url in urls:
+            if 'http://localhost:%s' % port in url:
+                items.append(url)
+    return items
 
-if __name__ == '__main__':
-    # Create a global `Workflow` object
-    wf = Workflow()
-    # Call your entry function via `Workflow.run()` to enable its
-    # helper functions, like exception catching, ARGV normalization,
-    # magic arguments etc.
-    sys.exit(wf.run(main))
+def construct_response_item(url):
+    # docs: https://www.alfredapp.com/help/workflows/inputs/script-filter/json/ 
+    return {
+        "title": url,
+        "arg": url
+    }
+
+def main():
+    if len(query) > 0:
+        port = query[0]
+        items.append(construct_response_item('http://localhost:%s' % port))
+
+        # Search for port
+        urls = search(port)
+        [items.append(construct_response_item(url)) for url in urls]
+    else:
+        # Load urls from `url_db.txt`
+        urls = load_db()
+        [items.append(construct_response_item(url)) for url in urls]
+
+    response = json.dumps({
+        "items": items
+    })
+
+    sys.stdout.write(response)
+
+main()
