@@ -8,6 +8,39 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>EA1612B0-3FD5-4B7B-8357-D18D2CF69077</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1CCD44A9-DD8E-48A4-916B-91BFC0E48CAB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>99945A39-1213-4F08-8DB9-7558EF5FE2D8</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Save</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>CDE78D45-D279-405E-A0B5-F875AA15F5B5</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Remove</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
 		<key>ECB0F862-A099-46CC-B3EB-2CAC540F3D45</key>
 		<array>
 			<dict>
@@ -124,6 +157,56 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>：</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>port=$@
+/usr/bin/python3 main.py $port</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>http://localhost:{query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>EA1612B0-3FD5-4B7B-8357-D18D2CF69077</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -186,7 +269,7 @@
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>270</integer>
+			<integer>290</integer>
 		</dict>
 		<key>CDE78D45-D279-405E-A0B5-F875AA15F5B5</key>
 		<dict>
@@ -195,7 +278,16 @@
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>450</integer>
+			<integer>495</integer>
+		</dict>
+		<key>EA1612B0-3FD5-4B7B-8357-D18D2CF69077</key>
+		<dict>
+			<key>note</key>
+			<string>Load URLs</string>
+			<key>xpos</key>
+			<integer>135</integer>
+			<key>ypos</key>
+			<integer>230</integer>
 		</dict>
 		<key>ECB0F862-A099-46CC-B3EB-2CAC540F3D45</key>
 		<dict>
