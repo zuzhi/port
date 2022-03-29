@@ -18,7 +18,7 @@ def search(input_url):
         for url in urls:
             if url.startswith('http://localhost'):
                 continue
-            if 'http:%s' % input_url in url:
+            if input_url in url:
                 items.append(url)
     return items
 
@@ -31,7 +31,7 @@ def construct_response_item(url):
 
 def main(input_url):
     if input_url:
-        items.append(construct_response_item('http:%s' % input_url))
+        items.append(construct_response_item('http://%s' % input_url))
 
         # Search for input_url
         urls = search(input_url)

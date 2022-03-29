@@ -34,7 +34,8 @@ def main():
         port = query[0]
         if port.startswith('//'):
             # port is full url
-            full_main(port)
+            input_url = port[2:]
+            full_main(input_url)
         else:
             items.append(construct_response_item('http://localhost:%s' % port))
 
