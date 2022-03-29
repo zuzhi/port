@@ -78,7 +78,7 @@
 	<key>createdby</key>
 	<string>zuzhi</string>
 	<key>description</key>
-	<string>Goto localhost:`port`</string>
+	<string>Goto localhost:`port`, or any url.</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -252,51 +252,51 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Goto localhost:port</string>
+	<string>Goto localhost:`port`</string>
 	<key>uidata</key>
 	<dict>
 		<key>1CCD44A9-DD8E-48A4-916B-91BFC0E48CAB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>480</integer>
+			<integer>505</integer>
 			<key>ypos</key>
-			<integer>100</integer>
+			<integer>50</integer>
 		</dict>
 		<key>99945A39-1213-4F08-8DB9-7558EF5FE2D8</key>
 		<dict>
 			<key>note</key>
 			<string>Add port</string>
 			<key>xpos</key>
-			<integer>480</integer>
+			<integer>505</integer>
 			<key>ypos</key>
-			<integer>290</integer>
+			<integer>240</integer>
 		</dict>
 		<key>CDE78D45-D279-405E-A0B5-F875AA15F5B5</key>
 		<dict>
 			<key>note</key>
 			<string>Remove port</string>
 			<key>xpos</key>
-			<integer>480</integer>
+			<integer>505</integer>
 			<key>ypos</key>
-			<integer>495</integer>
+			<integer>445</integer>
 		</dict>
 		<key>EA1612B0-3FD5-4B7B-8357-D18D2CF69077</key>
 		<dict>
 			<key>note</key>
 			<string>Load URLs</string>
 			<key>xpos</key>
-			<integer>135</integer>
+			<integer>160</integer>
 			<key>ypos</key>
-			<integer>230</integer>
+			<integer>180</integer>
 		</dict>
 		<key>ECB0F862-A099-46CC-B3EB-2CAC540F3D45</key>
 		<dict>
 			<key>note</key>
 			<string>Load URLs</string>
 			<key>xpos</key>
-			<integer>135</integer>
+			<integer>160</integer>
 			<key>ypos</key>
-			<integer>95</integer>
+			<integer>45</integer>
 		</dict>
 	</dict>
 	<key>variablesdontexport</key>
